@@ -313,6 +313,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 7766606146323914567, guid: 46b944369d2829546981db5880b7cda5, type: 3}
   shootLimit: 1
+  lookSpeed: 2
 --- !u!1 &1551392417
 GameObject:
   m_ObjectHideFlags: 0
