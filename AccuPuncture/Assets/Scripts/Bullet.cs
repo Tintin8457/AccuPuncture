@@ -5,6 +5,8 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float speed = 5.0f;
+    public Vector3 defaultOrientation;
+
     Rigidbody bulletRB;
     private Shooter shooter;
 
@@ -13,9 +15,9 @@ public class Bullet : MonoBehaviour
     {
         bulletRB = GetComponent<Rigidbody>();
 
-        //bulletRB.rotation.eulerAngles = new Vector3(-90f, 0f, 0f);
-        //transform.localEulerAngles = new Vector3(-90f, 0f, 0f);
+        transform.eulerAngles = new Vector3(defaultOrientation.x, 0f, 0f);
 
+        //Find player
         GameObject player = GameObject.FindGameObjectWithTag("MainCamera");
 
         if (player != null)
@@ -28,16 +30,23 @@ public class Bullet : MonoBehaviour
     void FixedUpdate()
     {
         //Bullet movement
-        //transform.localEulerAngles = new Vector3(-90f, 0f, 0f);
-        //bulletRB.transform.localEulerAngles = new Vector3(-90f, 0f, 0f);
-        //bulletRB.transform.localRotation = new Quaternion(-90f, 0f, 0f, 0f);
-        bulletRB.AddForce(transform.forward * speed);
+        //Vector3 force = (transform.forward * -1) * speed;
+        //bulletRB.AddForce(transform.forward * speed, ForceMode.Impulse);
+
+        transform.Translate(-transform.forward * speed);
     }
 
     //Destroy bullet at dummy and adds another bullet to the player's bullet 
     void OnCollisionEnter(Collision hit)
     {
         if (hit.gameObject.tag == "Dummy")
+        {
+            Destroy(gameObject);
+            shooter.shootLimit += 1;
+        }
+
+        //Destroy bullet at wall
+        if (hit.gameObject.tag == "Wall")
         {
             Destroy(gameObject);
             shooter.shootLimit += 1;

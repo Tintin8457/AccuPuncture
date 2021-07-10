@@ -7,8 +7,11 @@ public class Shooter : MonoBehaviour
     public GameObject projectile;
     public int shootLimit = 1;
 
+    public Transform bulletSpawn;
+
     private float verticalLook;
     public int lookSpeed = 5;
+    private Vector3 dist;
 
     // Start is called before the first frame update
     void Start()
@@ -28,8 +31,18 @@ public class Shooter : MonoBehaviour
         {
             if (shootLimit == 1)
             {
-                //Input screenray = Camera.main.ScreenPointToRay();
-                Instantiate(projectile, gameObject.transform.position, gameObject.transform.rotation);
+                //Ray click = Camera.main.ScreenPointToRay(Input.mousePosition);
+                //RaycastHit hit;
+
+                //if (Physics.Raycast(click, out hit))
+                //{
+                    
+                    //Transform shot = hit.transform;
+                    //Instantiate(projectile, gameObject.transform.position, gameObject.transform.rotation);
+                    //shootLimit -= 1; //Lower shoot limit
+                //}
+
+                Instantiate(projectile, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
                 shootLimit -= 1; //Lower shoot limit
             }             
         }
