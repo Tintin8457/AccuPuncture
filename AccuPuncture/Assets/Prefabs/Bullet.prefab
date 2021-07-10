@@ -126,4 +126,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27f23db17eed10344b6d575252347428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
+  speed: 1
+  defaultOrientation: {x: -90, y: 0, z: 0}
