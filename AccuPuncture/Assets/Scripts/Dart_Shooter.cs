@@ -56,7 +56,6 @@ public class Dart_Shooter : MonoBehaviour
             {
                 Destroy(dartsFired[0]);
                 dartsFired.Remove(dartsFired[0]);
-                ShiftFiredDarts();
             }
             
         }
