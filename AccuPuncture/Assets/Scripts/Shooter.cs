@@ -42,7 +42,7 @@ public class Shooter : MonoBehaviour
                     //shootLimit -= 1; //Lower shoot limit
                 //}
 
-                Instantiate(projectile, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
+                Instantiate(projectile, bulletSpawn.transform.position, transform.rotation * Quaternion.Euler(45f, 0f, 0f));
                 shootLimit -= 1; //Lower shoot limit
             }             
         }
