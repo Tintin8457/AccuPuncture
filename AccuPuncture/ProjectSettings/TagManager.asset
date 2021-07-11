@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Dummy
   - Wall
+  - Patient
+  - Target
   layers:
   - Default
   - TransparentFX

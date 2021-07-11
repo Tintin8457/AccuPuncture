@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2997900369692128706}
   m_Layer: 0
   m_Name: Moustaches
-  m_TagString: Untagged
+  m_TagString: Patient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 5507430034291245555}
   m_Layer: 0
   m_Name: Eyes
-  m_TagString: Untagged
+  m_TagString: Patient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -173,9 +173,10 @@ GameObject:
   - component: {fileID: 8709346587139377268}
   - component: {fileID: 3560265239357694021}
   - component: {fileID: 2565600740631492169}
+  - component: {fileID: 8729862097891558848}
   m_Layer: 0
   m_Name: Bottoms
-  m_TagString: Untagged
+  m_TagString: Patient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -243,6 +244,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8729862097891558848
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4022455559310046406}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6475887002624815441, guid: d814d4c0af7cf9a4bbc07c579fc0d16b, type: 3}
 --- !u!1 &4101389506985593445
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,9 +269,10 @@ GameObject:
   - component: {fileID: 8673668193198116734}
   - component: {fileID: 384778917303878876}
   - component: {fileID: 3497823460246104588}
+  - component: {fileID: 7259208478355369460}
   m_Layer: 0
   m_Name: Shoes
-  m_TagString: Untagged
+  m_TagString: Patient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -324,6 +340,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7259208478355369460
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4101389506985593445}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -278085929633702562, guid: d814d4c0af7cf9a4bbc07c579fc0d16b, type: 3}
 --- !u!1 &4275252420032912330
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,7 +367,7 @@ GameObject:
   - component: {fileID: 5946989080764433519}
   m_Layer: 0
   m_Name: Beards
-  m_TagString: Untagged
+  m_TagString: Patient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -416,9 +446,10 @@ GameObject:
   - component: {fileID: 1782016369553380921}
   - component: {fileID: 5277832982170959656}
   - component: {fileID: 162304430456216479}
+  - component: {fileID: 3778932160095678919}
   m_Layer: 0
   m_Name: Hats
-  m_TagString: Untagged
+  m_TagString: Patient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -486,6 +517,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3778932160095678919
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5576575092597549611}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2737054068471368503, guid: d814d4c0af7cf9a4bbc07c579fc0d16b, type: 3}
 --- !u!1 &7086545922333735022
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,9 +542,10 @@ GameObject:
   - component: {fileID: 6006881624588097084}
   - component: {fileID: 4212352945788056548}
   - component: {fileID: 5270717510177352480}
+  - component: {fileID: 5842555604361398719}
   m_Layer: 0
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Patient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -567,6 +613,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5842555604361398719
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7086545922333735022}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2959467708922500008, guid: d814d4c0af7cf9a4bbc07c579fc0d16b, type: 3}
 --- !u!1 &7370410252685517143
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,7 +638,7 @@ GameObject:
   - component: {fileID: 7855163680462732269}
   m_Layer: 0
   m_Name: _Patient_
-  m_TagString: Untagged
+  m_TagString: Patient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -619,7 +679,7 @@ GameObject:
   - component: {fileID: 4963248413955486680}
   m_Layer: 0
   m_Name: default1
-  m_TagString: Untagged
+  m_TagString: Patient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -700,7 +760,7 @@ GameObject:
   - component: {fileID: 580711356323001444}
   m_Layer: 0
   m_Name: Eyewear
-  m_TagString: Untagged
+  m_TagString: Patient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
