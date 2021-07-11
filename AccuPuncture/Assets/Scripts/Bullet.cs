@@ -41,7 +41,9 @@ public class Bullet : MonoBehaviour
     {
         if (hit.gameObject.tag == "Dummy")
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            bulletRB.constraints = RigidbodyConstraints.FreezeAll;
+            speed = 0.0f;
             shooter.shootLimit += 1;
         }
 
