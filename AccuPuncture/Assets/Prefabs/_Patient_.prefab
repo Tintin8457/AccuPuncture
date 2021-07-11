@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 125887287691011903}
   - component: {fileID: 6476833148232383068}
   - component: {fileID: 2997900369692128706}
+  - component: {fileID: 2349551001094855719}
   m_Layer: 0
   m_Name: Moustaches
   m_TagString: Patient
@@ -81,6 +82,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2349551001094855719
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105229351125046802}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1578609966500031594, guid: d814d4c0af7cf9a4bbc07c579fc0d16b, type: 3}
 --- !u!1 &3958096086307696528
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,6 +107,7 @@ GameObject:
   - component: {fileID: 2665227912322755837}
   - component: {fileID: 3914816905580117374}
   - component: {fileID: 5507430034291245555}
+  - component: {fileID: 5483952125703462601}
   m_Layer: 0
   m_Name: Eyes
   m_TagString: Patient
@@ -162,6 +178,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5483952125703462601
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3958096086307696528}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3359138182758997695, guid: d814d4c0af7cf9a4bbc07c579fc0d16b, type: 3}
 --- !u!1 &4022455559310046406
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,6 +395,7 @@ GameObject:
   - component: {fileID: 1377281630550153817}
   - component: {fileID: 2654517377481264069}
   - component: {fileID: 5946989080764433519}
+  - component: {fileID: 7518242828267850766}
   m_Layer: 0
   m_Name: Beards
   m_TagString: Patient
@@ -435,6 +466,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7518242828267850766
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4275252420032912330}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4218632471795687679, guid: d814d4c0af7cf9a4bbc07c579fc0d16b, type: 3}
 --- !u!1 &5576575092597549611
 GameObject:
   m_ObjectHideFlags: 0
@@ -677,6 +722,7 @@ GameObject:
   - component: {fileID: 8739327497149714610}
   - component: {fileID: 6372201704757144352}
   - component: {fileID: 4963248413955486680}
+  - component: {fileID: 8157029425194547191}
   m_Layer: 0
   m_Name: default1
   m_TagString: Patient
@@ -747,6 +793,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8157029425194547191
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7462533772157583463}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4197095107048076384, guid: d814d4c0af7cf9a4bbc07c579fc0d16b, type: 3}
 --- !u!1 &8957374687842728064
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,6 +818,7 @@ GameObject:
   - component: {fileID: 8234394657367673274}
   - component: {fileID: 6077328281168553295}
   - component: {fileID: 580711356323001444}
+  - component: {fileID: 3639202506254112045}
   m_Layer: 0
   m_Name: Eyewear
   m_TagString: Patient
@@ -828,3 +889,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3639202506254112045
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8957374687842728064}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3836201855041035471, guid: d814d4c0af7cf9a4bbc07c579fc0d16b, type: 3}

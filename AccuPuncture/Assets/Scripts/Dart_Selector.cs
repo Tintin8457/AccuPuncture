@@ -8,6 +8,8 @@ public class Dart_Selector : MonoBehaviour
     [SerializeField] private List<GameObject> dartProjectiles = new List<GameObject>();
     [SerializeField] private List<Sprite> dartImages = new List<Sprite>();
 
+    //[SerializeField] private Dart_Shooter shooter null;
+
     [SerializeField] private int numTypes;
     [SerializeField] private int currTypeIndex = 0;
 
@@ -22,10 +24,16 @@ public class Dart_Selector : MonoBehaviour
         numTypes = dartTypes.Count;
 
         if(Input.GetKeyDown(KeyCode.Q))
+        {
             currTypeIndex = GetPrevDartIndex(currTypeIndex);
 
+        }
+            
         if(Input.GetKeyDown(KeyCode.E))
+        {
             currTypeIndex = GetNextDartIndex(currTypeIndex);
+
+        }
     }
 
     int GetPrevDartIndex(int currentIndex)

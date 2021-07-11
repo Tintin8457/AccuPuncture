@@ -9,6 +9,7 @@ TagManager:
   - Patient
   - Target
   - Bullet
+  - Other
   layers:
   - Default
   - TransparentFX

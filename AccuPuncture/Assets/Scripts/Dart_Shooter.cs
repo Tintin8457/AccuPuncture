@@ -7,12 +7,13 @@ public class Dart_Shooter : MonoBehaviour
 {
     [SerializeField] private Dart_Selector selector = null;
 
+    [SerializeField] private Game_Controller controller = null;
+
     [SerializeField] private Transform dartSpawn = null;
 
     private int limit = 5;
 
     private GameObject dartType = null;
-    //private Rigidbody projectile = null;
 
     [SerializeField] private bool ready = true; 
 
@@ -23,43 +24,60 @@ public class Dart_Shooter : MonoBehaviour
     public Text winText;
     public bool gameOver;
 
-    // Start is called before the first frame update
+    private float timer = 0f;
+    private bool timerOn = false;
+
     void Start()
     {
         winText.enabled = false;
         gameOver = false;
+        timer = 0f;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(timerOn)
+            timer += Time.deltaTime;
+
+        if(timer >= 2.0f)
+        {
+            SetReady();
+            timerOn = false;
+            timer = 0f;
+        }
+
         if (gameOver == false)
         {
-            if (ready)
+            if(ready)
             {
-                //As long as there is no current dartType, insantiate a non-projectile dart at the spawn location
-                if (dartType == null)
+                if(dartType == null)
                 {
-                    dartType = (GameObject)Instantiate(selector.GetCurrDart(),
-                        dartSpawn.position, dartSpawn.rotation);
+                    controller.DisplayReady();
+                    dartType = (GameObject)Instantiate(selector.GetCurrDart(), 
+                    dartSpawn.position, dartSpawn.rotation);
+                
+                    dartType.transform.parent = dartSpawn.transform;
                 }
             }
 
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.GetKeyDown(KeyCode.Mouse0) && ready)
             {
                 GameObject firedDart = null;
 
                 //Set ready to false and destroy the preview dart
+                timer = 0f;
+                timerOn = true;
                 ready = false;
+                controller.ClearReadyText();
+
                 Destroy(dartType);
 
                 //Spawn projectile
-                firedDart = (GameObject)Instantiate(selector.GetCurrProjectile(),
+                firedDart = (GameObject)Instantiate(selector.GetCurrProjectile(), 
                     dartSpawn.position, dartSpawn.rotation);
                 dartsFired.Add(firedDart);
-                firedDart.GetComponent<Rigidbody>().velocity = dartSpawn.forward * 15;
-
-                //Destroy old projectiles
+                firedDart.GetComponent<Rigidbody>().velocity = dartSpawn.forward * 10;
 
                 if (dartsFired.Count > limit)
                 {
@@ -80,12 +98,7 @@ public class Dart_Shooter : MonoBehaviour
 
     public void SetReady()
     {
-        ready = !ready;
-    }
-
-    void ShiftFiredDarts()
-    {
-        Debug.Log("Get Shifty");
+        ready = true;
     }
 
     public void UpdateScore(int newScore)
