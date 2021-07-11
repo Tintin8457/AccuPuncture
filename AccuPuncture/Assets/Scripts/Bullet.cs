@@ -9,6 +9,7 @@ public class Bullet : MonoBehaviour
 
     Rigidbody bulletRB;
     private Shooter shooter;
+    private Dart_Shooter altShooter;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,14 @@ public class Bullet : MonoBehaviour
         if (player != null)
         {
             shooter = player.GetComponent<Shooter>();
+        }
+
+        //Find ALT player
+        GameObject pla = GameObject.FindGameObjectWithTag("MainCamera");
+
+        if (player != null)
+        {
+            altShooter = pla.GetComponent<Dart_Shooter>();
         }
     }
 
@@ -39,7 +48,16 @@ public class Bullet : MonoBehaviour
     //Destroy bullet at dummy and adds another bullet to the player's bullet 
     void OnCollisionEnter(Collision hit)
     {
-        if (hit.gameObject.tag == "Dummy")
+        if (/*hit.gameObject.tag == "Dummy" ||*/ hit.gameObject.tag == "Target")
+        {
+            //Destroy(gameObject);
+            bulletRB.constraints = RigidbodyConstraints.FreezeAll;
+            speed = 0.0f;
+            shooter.shootLimit += 1;
+            altShooter.UpdateScore(1);
+        }
+
+        if (hit.gameObject.tag == "Patient")
         {
             //Destroy(gameObject);
             bulletRB.constraints = RigidbodyConstraints.FreezeAll;
